@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 from ..models import Automobile, autos_schema, auto_schema, db
 
+# current route - /api/automobiles
 autos_bp = Blueprint('autos_bp', __name__)
 
 @autos_bp.route('/')

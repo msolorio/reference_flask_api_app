@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_migrate import Migrate
 from .models import db, ma
-from .controllers.autos_bp import autos_bp
+from .controllers.api_bp import api_bp
 
 def create_app():
     app = Flask(__name__)
@@ -12,19 +12,11 @@ def create_app():
 
     Migrate(app, db)
 
-    app.register_blueprint(autos_bp, url_prefix='/api/automobiles')
-
-    @app.route('/api/')
-    def api_root():
-        return { 'message': 'Welcome to the reference Flask API. Navigate to /api/docs to access OpenAPI docs.' }
+    app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.route('/')
     def index():
         return redirect(url_for('api_root'))
     
-    @app.route('/api/docs')
-    def get_docs():
-        print('sending docs')
-        return render_template('swaggerui.html')
 
     return app

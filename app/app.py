@@ -13,7 +13,7 @@ def create_app():
     app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.route('/')
-    def index():
+    def root():
         return redirect(url_for('api_root'))
     
     return app

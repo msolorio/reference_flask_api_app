@@ -5,7 +5,7 @@ A demo implementation of
 - Marshmallow
 - PostgreSQL
 - Flask Migrate
-- Swagger
+- Swagger/OpenAPI
 
 To be used as a reference for new Flask projects.
 

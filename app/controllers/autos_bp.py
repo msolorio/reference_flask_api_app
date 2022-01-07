@@ -29,7 +29,7 @@ def create():
     required_fields = ('make', 'model', 'year')
     for field in required_fields:
         if not json_data.get(field):
-            return f'{field} is a required field', 404
+            return { 'message': f'{field} is a required field' }, 404
 
     new_auto = Automobile(
         make=json_data.get('make'),

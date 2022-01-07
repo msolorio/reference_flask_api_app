@@ -1,4 +1,4 @@
-## Flask Demo
+## Flask API Demo
 A demo implementation of
 - Flask
 - SQLAlchemy
@@ -7,7 +7,7 @@ A demo implementation of
 - Flask Migrate
 - Swagger/OpenAPI
 
-To be used as a reference for new Flask projects.
+To be used as a reference for new Flask web API projects.
 
 ---
 

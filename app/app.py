@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for
 from flask_migrate import Migrate
 from .models import db, ma
-from .controllers.api_bp import api_bp
+from .api_bp import api_bp
 
 def create_app():
     app = Flask(__name__)   

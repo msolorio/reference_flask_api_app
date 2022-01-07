@@ -5,6 +5,7 @@ A demo implementation of
 - Marshmallow
 - PostgreSQL
 - Flask Migrate
+- Swagger
 
 To be used as a reference for new Flask projects.
 
@@ -35,16 +36,16 @@ visit `localhost:5000/api/docs`
 ### Test in browser or HTTP client
 
 returns all automobiles<br>
-`GET /automobiles`
+`GET /api/automobiles`
 
 returns an single automobiles<br>
-`GET /automobiles/<int:automobile_id>`
+`GET /api/automobiles/<int:automobile_id>`
 
 creates an automobiles<br>
-`POST /automobiles { "make": "Aptera", "model": "Paradigm", "year": 2022, "color": "black" }`
+`POST /api/automobiles { "make": "Aptera", "model": "Paradigm", "year": 2022, "color": "black" }`
 
 deletes an automobiles<br>
-`DELETE /automobiles/<int:automobile_id>`
+`DELETE /api/automobiles/<int:automobile_id>`
 
 updates an automobile<br>
-`PATCH /automobiles/<int:automobile_id> { "color": "storm trooper" }`
+`PATCH /api/automobiles/<int:automobile_id> { "color": "storm trooper" }`

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, render_template
 from flask_migrate import Migrate
 from .models import db, ma
 from .controllers.autos_bp import autos_bp
@@ -12,10 +12,15 @@ def create_app():
 
     Migrate(app, db)
 
-    app.register_blueprint(autos_bp, url_prefix='/automobiles')
+    app.register_blueprint(autos_bp, url_prefix='/api/automobiles')
 
-    @app.route('/')
+    @app.route('/api/')
     def index():
         return { 'message': 'hello from index' }
     
+    @app.route('/docs')
+    def get_docs():
+        print('sending docs')
+        return render_template('swaggerui.html')
+
     return app

@@ -29,6 +29,9 @@ This will
 
 ---
 
+### Test using Swagger UI
+visit `localhost:5000/api/docs`
+
 ### Test in browser or HTTP client
 
 returns all automobiles<br>

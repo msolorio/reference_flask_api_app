@@ -12,10 +12,13 @@ To be used as a reference for new Flask projects.
 
 ### Steps to Run
 
-Create a postgres database
+Create a postgres database<br>
 `$ createdb flask_postgres`
 
-Run the Bootsrap
+Create Tables in PostgreSQL<br>
+`$ ./migrate 'Initial migration'`
+
+Run the Bootsrap<br>
 `$ ./bootstrap.sh`
 
 This will
@@ -23,9 +26,6 @@ This will
 - start virtual environment
 - create app
 - run app at http://localhost:5000
-
-Create Tables in PostgreSQL
-`$ ./migrate 'Initial migration'`
 
 ---
 

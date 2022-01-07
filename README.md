@@ -36,13 +36,13 @@ visit `localhost:5000/api/docs`
 ### Test in browser or HTTP client
 
 returns all automobiles<br>
-`GET /api/automobiles`
+`GET /api/automobiles/`
 
 returns an single automobiles<br>
 `GET /api/automobiles/<int:automobile_id>`
 
 creates an automobiles<br>
-`POST /api/automobiles { "make": "Aptera", "model": "Paradigm", "year": 2022, "color": "black" }`
+`POST /api/automobiles/ { "make": "Aptera", "model": "Paradigm", "year": 2022, "color": "black" }`
 
 deletes an automobiles<br>
 `DELETE /api/automobiles/<int:automobile_id>`

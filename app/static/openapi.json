@@ -24,7 +24,7 @@
         }
       }
     },
-    "/automobiles": {
+    "/automobiles/": {
       "get": {
         "tags": [
           "automobiles"
@@ -56,11 +56,32 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
-            "description": "Automobile data to be added",
-            "required": true,
+            "name": "automobile",
+            "description": "properties and values for new automobile",
             "schema": {
-              "$ref": "#/definitions/Automobile"
+              "required": [
+                "make",
+                "model",
+                "year"
+              ],
+              "properties": {
+                "make": {
+                  "type": "string",
+                  "default": "Aptera"
+                },
+                "model": {
+                  "type": "string",
+                  "default": "Paradigm"
+                },
+                "year": {
+                  "type": "integer",
+                  "default": 2022
+                },
+                "color": {
+                  "type": "string",
+                  "default": "black"
+                }
+              }
             }
           }
         ],
@@ -128,6 +149,14 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "automobile",
+            "description": "The properties to update (make, model, year, color)",
+            "schema": {
+              "type": "object"
+            }
           }
         ],
         "responses": {

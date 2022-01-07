@@ -68,4 +68,4 @@ def delete(auto_id):
     db.session.delete(auto)
     db.session.commit()
 
-    return { 'message': 'Automobile deleted' }, 204
+    return { 'message': 'Automobile deleted' }, 200

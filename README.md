@@ -31,15 +31,17 @@ This will
 
 ### Test in browser or HTTP client
 
-returns all cats<br>
-`GET /cats`
+returns all automobiles<br>
+`GET /automobiles`
 
-returns a single cat<br>
-`GET /cats/<int:cat_id>`
+returns an single automobiles<br>
+`GET /automobiles/<int:automobile_id>`
 
-creates a cat<br>
-`POST /cats { "name": "cat name", "age": 1, "color": "speckled" }`
+creates an automobiles<br>
+`POST /automobiles { "make": "Aptera", "model": "Paradigm", "year": 2022, "color": "black" }`
 
-deletes a cat<br>
-`DELETE /cats/<int:cat_id>`
-```
+deletes an automobiles<br>
+`DELETE /automobiles/<int:automobile_id>`
+
+updates an automobile<br>
+`PATCH /automobiles/<int:automobile_id> { "color": "storm trooper" }`
